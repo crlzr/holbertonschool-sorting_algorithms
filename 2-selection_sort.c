@@ -22,7 +22,7 @@ void selection_sort(int *array, size_t size)
 	{
 		/* find the minimum element in unsorted array */
 		min_idx = i;
-		flag = 0;
+		flag = 0; /* flag counts the swaps */
 		for (j = i + 1; j < size; j++)
 		{
 			if ((array[j]) < (array[min_idx]))
@@ -36,7 +36,7 @@ void selection_sort(int *array, size_t size)
 			array[i] = array[min_idx];
 			array[min_idx] = temp;
 
-			if (flag != 0)
+			if (flag != 0) /* no swap has happened, therefore end of swapping */
 				print_array(array, size);
 	}
 }
