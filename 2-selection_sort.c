@@ -38,5 +38,5 @@ void selection_sort(int *array, size_t size)
 
 			if (flag != 0)
 				print_array(array, size);
-	}	
+	}
 }
