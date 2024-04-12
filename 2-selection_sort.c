@@ -15,8 +15,8 @@ void selection_sort(int *array, size_t size)
 	size_t j = 0;
 	size_t min_idx;
 	int temp;
-
-	for (i = 0; i < size - 1; i++)
+	/* loop through array */
+	for (i = 0; i < size; i++)
 	{
 		/* find the minimum element in unsorted array */
 		min_idx = i;
@@ -27,16 +27,11 @@ void selection_sort(int *array, size_t size)
 			{
 				min_idx = j;
 			}
-
-			/* swap */
-
-			if (min_idx != i)
-			{
-				temp = array[i];
-				array[i] = array[min_idx];
-				array[min_idx] = temp;
-			}
-			print_array(array, size);
 		}
-	}
+			/* swap */
+			temp = array[i];
+			array[i] = array[min_idx];
+			array[min_idx] = temp;
+			print_array(array, size);
+	}	
 }
